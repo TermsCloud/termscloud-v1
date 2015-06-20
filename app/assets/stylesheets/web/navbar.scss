@@ -1,0 +1,27 @@
+.header-navbar {
+  padding: 10px 0;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+
+.title-nav {
+  margin-top: 40px;
+
+  ul {
+    float: right;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    padding: 10px 20px; 
+    color: $terms-blue;
+    &:hover{
+      text-decoration: none;
+      border-bottom: 2px solid $terms-blue;
+    }
+  }
+}
