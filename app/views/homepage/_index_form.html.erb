@@ -1,0 +1,38 @@
+<% if @user.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_for @user, url: homepage_register_user_path do |f| %>
+  <div class="row">
+    <div class="col-sm-6">
+      <%= f.text_field :firstname, class: '', placeholder: 'Firstname' %>
+    </div>
+    <div class="col-sm-6">
+      <%= f.text_field :lastname, class: '', placeholder: 'Lastname' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= f.email_field :email, placeholder: 'Email' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= f.url_field :website_url, placeholder: 'Your website URL' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= f.check_box :terms %>
+      <%= f.label :terms, 'I agree to TermsCloud\'s terms of use' %>
+    </div>
+  </div>
+
+  <%= f.submit 'Get Started' %>
+<% end %>
+

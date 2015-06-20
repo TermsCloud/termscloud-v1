@@ -1,0 +1,10 @@
+.sign-in-form {
+  input[type="email"], input[type="password"]  {
+    border: 1px solid grey;
+    padding: 7px;
+    }
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

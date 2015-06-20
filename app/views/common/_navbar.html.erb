@@ -7,6 +7,10 @@
 <div class="col-xs-6">
   <nav class="title-nav">
     <ul>
+
+      <% if signed_in? %>
+        <li><%= link_to 'Admin', admin_root_path %>
+      <% end %>
       <li><%= link_to 'Get Started', homepage_get_started_path %></li>
     </ul>
   </nav>
