@@ -8,24 +8,24 @@
 *{
   box-sizing: border-box;
 }
-.container { 
-}
 
 h1, h2, h3, h4, h5, h6, p, a, span, table, input, label {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
-input {
+input, textarea {
   border-radius: 0;
+  padding: 5px;
 }
+
 
 
 .flash-alert {
   border-radius: 0;
   position: absolute;
   margin-top: 10px;
-  }
+}
 
 
 
@@ -38,4 +38,6 @@ input {
 // Pages
 @import "homepage";
 @import "get_started";
+@import "contact";
 @import "session/sign_in_form";
+

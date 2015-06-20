@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'homepage/index'
   get 'get_started', to: 'homepage#get_started'
   get 'contact', to: 'homepage#contact'
+  post 'contact', to: 'homepage#send_contact'
   post 'homepage/register_user'
   post 'get_started', to: 'homepage#submit_getting_started'
 

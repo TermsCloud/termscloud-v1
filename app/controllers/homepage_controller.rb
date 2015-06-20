@@ -32,6 +32,12 @@ class HomepageController < ApplicationController
 
   end
 
+  def send_contact
+    ContactMailer.contact_form(params[:contact_form]).deliver
+    flash[:succes] = 'Message sent. We\'ll be in touch soon'
+    render :contact
+  end
+
   private
 
   def user_params
