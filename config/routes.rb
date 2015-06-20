@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
 
   get 'homepage/index'
-  post 'homepage/register_user'
   get 'get_started', to: 'homepage#get_started'
+  get 'contact', to: 'homepage#contact'
+  post 'homepage/register_user'
   post 'get_started', to: 'homepage#submit_getting_started'
 
 end

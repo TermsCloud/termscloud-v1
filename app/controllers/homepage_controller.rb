@@ -28,6 +28,9 @@ class HomepageController < ApplicationController
     end
   end
 
+  def contact 
+
+  end
 
   private
 
