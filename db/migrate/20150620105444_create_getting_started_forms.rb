@@ -1,6 +1,6 @@
-class CreateRequests< ActiveRecord::Migration
+class CreateGettingStartedForms < ActiveRecord::Migration
   def change
-    create_table :requests do |t|
+    create_table :getting_started_forms do |t|
       t.string :business_name
       t.integer :number_of_employees
       t.string :phone

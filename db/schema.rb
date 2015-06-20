@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150620105444) do
   enable_extension "plpgsql"
   enable_extension "hstore"
 
-  create_table "requests", force: :cascade do |t|
+  create_table "getting_started_forms", force: :cascade do |t|
     t.string   "business_name"
     t.integer  "number_of_employees"
     t.string   "phone"
