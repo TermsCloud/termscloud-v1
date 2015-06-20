@@ -48,3 +48,5 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+
+gem 'clearance', '1.10.1'
