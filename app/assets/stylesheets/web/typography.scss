@@ -1,0 +1,21 @@
+h1.title-header {
+  color: #666666;
+  line-height: 1.5em;
+  font-size: 46px;
+  margin-bottom: 30px;
+}    
+
+input[type='submit'] {
+  border: none;
+  color: white;
+  background-color: $submit-btn-color;
+  padding: 7px;
+  margin-top: 5px;
+  &:hover {
+    background-color: darken($submit-btn-color, 10%);
+  }
+  &:active {
+    background-color: darken($submit-btn-color, 20%);
+  }
+}
+

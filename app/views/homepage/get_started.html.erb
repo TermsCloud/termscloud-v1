@@ -1,13 +1,66 @@
 <section class="row get-started">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-  <h1>We are just putting the finishing touches to TermsCloud.</h1>
+<div class="col-sm-12 col-md-10 col-md-offset-1">
+  <h1 class="title-header">We are just putting the finishing touches to TermsCloud.</h1>
   <div class="row">
-    <div class="col-sm-5 col-md-3 col-md-offset-1">
+    <div class="hidden-xs hidden-sm col-md-2 col-md-offset-1">
       <%= image_tag 'settings.png' %>
     </div>
-    <div class="col-sm-8 col-md-7">
+    <div class="col-sm-12 col-md-8">
       <p>Let us know what you are after though and we will see what we can do (free of charge).</p>
-
+      <%= form_for @getting_started_form, {url: ''}  do |f| %>
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.check_box :website_terms_of_use %>
+            <%= f.label :website_terms_of_use %>
+          </div>
+          <div class="col-md-4">
+            <%= f.check_box :acceptable_use_policy %>
+            <%= f.label :acceptable_use_policy %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.check_box :privacy_and_cookies_policy %>
+            <%= f.label :privacy_and_cookies_policy, 'Privacy &amp; cookies policy'.html_safe %>
+          </div>
+          <div class="col-md-4">
+            <%= f.label :other, 'Other (please specify)' %>
+          </div>
+          <div class="col-md-4">
+            <%= f.text_field :other %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.label :business_name %>
+          </div>
+          <div class="col-md-8">
+            <%= f.text_field :business_name %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.label :number_of_employees %>
+          </div>
+          <div class="col-md-8">
+            <%= f.number_field :number_of_employees %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.label :phone, 'Contact Number' %>
+          </div>
+          <div class="col-md-8">
+            <%= f.text_field :phone %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <%= f.submit 'Submit' %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
+</section>
