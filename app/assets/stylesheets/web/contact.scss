@@ -1,6 +1,11 @@
 .contact-page{
+  margin: 50px 0; 
   input, textarea {
     width: 100%;
     margin-bottom: 10px;
-    }
+  }
+
+  textarea {
+    border-color: lightgray;
+  }
 }
