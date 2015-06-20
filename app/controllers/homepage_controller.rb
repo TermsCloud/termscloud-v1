@@ -7,6 +7,7 @@ class HomepageController < ApplicationController
     @user = User.new(user_params)
     if @user.valid?
       @user.save
+      sign_in(@user)
       flash[:success] = 'Thank you for signing up! Please fill out the form below to get started.'
       redirect_to homepage_get_started_path and return 
     end
@@ -20,6 +21,7 @@ class HomepageController < ApplicationController
   def submit_getting_started
     @form = GettingStartedForm.new(getting_started_params)
     if @form.valid?
+      @form.user = current_user 
       @form.save
       flash[:success] = 'Thank you, we will be in touch shortly to see how we can help.'
     end
