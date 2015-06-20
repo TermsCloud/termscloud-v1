@@ -5,10 +5,32 @@
 </div>
 <div class="col-md-4">
   <%= form_for @user do |f| %>
-    <%= f.text_field :firstname %>
-    <%= f.text_field :lastname %>
-    <%= f.email_field :email %>
-    <%= f.url_field :website_url %>
+    <div class="row">
+      <div class="col-sm-6">
+        <%= f.text_field :firstname, class: '', placeholder: 'Firstname' %>
+      </div>
+      <div class="col-sm-6">
+        <%= f.text_field :lastname, class: '', placeholder: 'Lastname' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <%= f.email_field :email, placeholder: 'Email' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <%= f.url_field :website_url, placeholder: 'Your website URL' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <%= f.check_box :terms %>
+        <%= f.label :terms, 'I agree to TermsCloud\'s terms of use' %>
+      </div>
+    </div>
+
+    <%= f.submit 'Get Started' %>
   <% end %>
 </div>
 
