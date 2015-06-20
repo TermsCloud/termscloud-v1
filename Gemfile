@@ -42,6 +42,7 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.2'
   gem 'pry-byebug', '~> 2.0.0'
   gem 'spring'
+  gem 'dotenv-rails', '2.0.2'
 end
 
 
@@ -52,3 +53,5 @@ end
 gem 'clearance', '1.10.1'
 gem 'faker', '1.4.3'
 gem 'activeadmin', '~> 1.0.0.pre1'
+
+gem 'gibbon', '1.1.5'

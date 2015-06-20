@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   include Clearance::User
   before_validation :generate_random_password
+  after_create :add_to_mailchimp
 
 
   validates :firstname, presence: true
@@ -10,5 +11,9 @@ class User < ActiveRecord::Base
 
   def generate_random_password
     self.password ||= Faker::Internet.password
+  end
+
+  def add_to_mailchimp
+    MailchimpService.new.subscribe_user(self)
   end
 end
