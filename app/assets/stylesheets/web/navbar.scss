@@ -3,7 +3,6 @@
   border-bottom: 1px solid #CCCCCC;
 }
 
-
 .title-nav {
   margin-top: 40px;
 
@@ -22,6 +21,9 @@
     &:hover{
       text-decoration: none;
       border-bottom: 2px solid $terms-blue;
+    }
+    &:focus {
+      text-decoration: none;
     }
   }
 }
