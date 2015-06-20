@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
 
   validates :firstname, presence: true
   validates :lastname, presence: true
-  validates :email, presence: true
   validates :website_url, presence: true
+  validates :terms, presence: true
 
   def generate_random_password
     self.password ||= Faker::Internet.password

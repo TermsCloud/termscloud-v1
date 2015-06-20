@@ -3,6 +3,5 @@ class GettingStartedForm< ActiveRecord::Base
 
   validates :business_name, presence: true
   validates :number_of_employees, presence: true
-  validates :contact_number, presence: true
-
+  validates :phone, presence: true
 end

@@ -1,3 +1,0 @@
-class FormsController < ApplicationController 
-
-end

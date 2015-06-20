@@ -7,7 +7,16 @@
     </div>
     <div class="col-sm-12 col-md-8">
       <p>Let us know what you are after though and we will see what we can do (free of charge).</p>
-      <%= form_for @getting_started_form, {url: ''}  do |f| %>
+      <% if @form.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <ul>
+            <% @form.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= form_for @form, {url: ''}  do |f| %>
         <div class="row">
           <div class="col-md-4">
             <%= f.check_box :website_terms_of_use %>

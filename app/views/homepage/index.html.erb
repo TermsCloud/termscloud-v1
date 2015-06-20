@@ -4,7 +4,16 @@
   <p>TermsCloud helps you create bespoke website terms of use and legal policies in minutes and maintain them automatically as the law changes.<p>
 </div>
 <div class="col-md-4">
-  <%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form_for @user, url: homepage_register_user_path do |f| %>
     <div class="row">
       <div class="col-sm-6">
         <%= f.text_field :firstname, class: '', placeholder: 'Firstname' %>
@@ -38,7 +47,7 @@
 <section class="row homepage-site-explanation">
   <div class="col-sm-12">
     <header class="text-center">
-     <p>How it works</p>
+      <p>How it works</p>
     </header>
   </div>
   <div class="col-sm-12 col-md-10 col-md-offset-1">

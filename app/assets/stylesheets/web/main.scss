@@ -21,6 +21,13 @@ input {
 }
 
 
+.flash-alert {
+  border-radius: 0;
+  position: absolute;
+  margin-top: 10px;
+  }
+
+
 
 // Common
 @import "navbar";
