@@ -50,3 +50,4 @@ end
 
 
 gem 'clearance', '1.10.1'
+gem 'faker', '1.4.3'
