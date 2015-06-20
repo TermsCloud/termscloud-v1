@@ -1,10 +1,10 @@
 .homepage-call-to-action {
-  margin: 50px 0;
+  margin: 40px 0 50px;
   h1 {
     color: #666666;
     line-height: 1.5em;
     font-size: 46px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
   p  {
     color: $terms-blue;
@@ -12,7 +12,7 @@
   }
 
   form {
-    margin-top: 35px;
+    margin-top: 30px;
     input { 
       width: 100%;
       padding: 5px;
@@ -33,8 +33,19 @@
       background-color: #25AAFF;
       padding: 7px;
       margin-top: 5px;
-
-
     }
   }
+}
+
+.homepage-site-explanation {
+  margin-bottom: 40px;
+  header {
+    margin-bottom: 40px;
+    font-size: 15px;
+  }
+  img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+
 }
