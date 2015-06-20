@@ -9,7 +9,7 @@ class HomepageController < ApplicationController
       @user.save
       sign_in(@user)
       flash[:success] = 'Thank you for signing up! Please fill out the form below to get started.'
-      redirect_to homepage_get_started_path and return 
+      redirect_to get_started_path and return 
     end
     render :index
   end
@@ -23,10 +23,11 @@ class HomepageController < ApplicationController
     if @form.valid?
       @form.user = current_user 
       @form.save
-      flash[:success] = 'Thank you, we will be in touch shortly to see how we can help.'
+    else 
+      render :get_started
     end
-    render :get_started
   end
+
 
   private
 

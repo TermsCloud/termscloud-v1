@@ -22,6 +22,14 @@
       color: $terms-light-gray;
     }
   }
+
+  @media (max-width: $screen-xs) {
+    margin: 20px 0 50px;
+    h1 {
+      font-size: 35px;
+      line-height: 45px;
+    }
+  }
 }
 
 .homepage-site-explanation {
@@ -32,7 +40,9 @@
   }
   img {
     display: block;
-    margin: 0 auto 10px;
+    margin: 0 auto 20px;
   }
-
+  p {
+    margin-bottom: 30px;
+  }
 }
