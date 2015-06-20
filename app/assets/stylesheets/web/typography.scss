@@ -9,7 +9,7 @@ input[type='submit'] {
   border: none;
   color: white;
   background-color: $submit-btn-color;
-  padding: 7px;
+  padding: 8px !important; 
   margin-top: 5px;
   &:hover {
     background-color: darken($submit-btn-color, 10%);
