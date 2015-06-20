@@ -1,2 +1,21 @@
-<h1>Homepage#index</h1>
-<p>Find me in app/views/homepage/index.html.erb</p>
+<section class="row homepage-call-to-action" >
+<div class="col-md-6 col-md-offset-1">
+  <h1>Take care of your website legals. For ever.</h1>
+  <p>TermsCloud helps you create bespoke website terms of use and legal policies in minutes and maintain them automatically as the law changes.<p>
+</div>
+<div class="col-md-4">
+  <%= form_for @user do |f| %>
+    <%= f.text_field :firstname %>
+    <%= f.text_field :lastname %>
+    <%= f.email_field :email %>
+    <%= f.url_field :website_url %>
+  <% end %>
+</div>
+
+</section>
+<section class="row">
+  <div class="col-sm-12">
+    <p class="text-center">How it works</p>
+  </div>
+
+</section>
