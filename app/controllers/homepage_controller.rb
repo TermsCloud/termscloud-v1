@@ -29,7 +29,6 @@ class HomepageController < ApplicationController
   end
 
   def contact 
-
   end
 
   def send_contact
