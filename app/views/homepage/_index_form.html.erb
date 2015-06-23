@@ -1,20 +1,10 @@
-<%= form_for @user, url: homepage_register_user_path do |f| %>
+<%= form_for @user, url: register_user_path do |f| %>
   <div class="row visible-md visible-lg">
     <div class="col-sm-6 right-padding">
       <%= f.text_field :firstname, class: 'half-input first', placeholder: 'Firstname' %>
     </div>
     <div class="col-sm-6 left-padding">
       <%= f.text_field :lastname, class: 'half-input', placeholder: 'Lastname' %>
-    </div>
-  </div>
-  <div class="row visible-sm visible-xs">
-    <div class="col-sm-12">
-      <%= f.text_field :firstname, placeholder: 'Firstname' %>
-    </div>
-  </div>
-  <div class="row visible-sm visible-xs">
-    <div class="col-sm-12">
-      <%= f.text_field :lastname , placeholder: 'Lastname' %>
     </div>
   </div>
 
