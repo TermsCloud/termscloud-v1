@@ -3,9 +3,37 @@
   border-bottom: 1px solid #CCCCCC;
 }
 
-.brand-logo {
+.burger {
+  display: block;
+  float: right;
+  padding: 20px 20px 0;
+}
+
+.burger-strip {
+  height: 3px;
+  width: 30px;
+  margin-bottom: 7px;
+  background-color: $terms-blue;
+  border-radius: 2px;
+}
+
+.mobile-nav {
+  display: none;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    display: block;
+    border-bottom: 1px solid #CCCCCC;
+    color: $terms-blue;
+    padding: 20px;
+    width: 100%
 
   }
+}
+
+
 .title-nav {
   margin-top: 40px;
 

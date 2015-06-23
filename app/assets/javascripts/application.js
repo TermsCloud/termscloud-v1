@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//
+//
+
+
+function toggleMobileNav() {
+  var mobileNav = document.getElementById('mobile-nav');
+  if (mobileNav.style.display == 'block') {
+    mobileNav.style.display = '';
+  } else {
+    mobileNav.style.display = 'block';
+  }
+}
