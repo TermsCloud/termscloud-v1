@@ -55,3 +55,5 @@ gem 'faker', '1.4.3'
 gem 'activeadmin', '~> 1.0.0.pre1'
 
 gem 'gibbon', '1.1.5'
+
+gem 'sitemap_generator', '5.0.5'
