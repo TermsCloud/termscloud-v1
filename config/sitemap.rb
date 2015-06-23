@@ -2,7 +2,6 @@ SitemapGenerator::Sitemap.default_host = "http://www.termscloud.co.uk"
 
 SitemapGenerator::Sitemap.create do
 
-  add root_path, priority: 0.9, lastmod: Time.now, changefreq: 'weekly'
   add contact_path, priority: 0.6, lastmod: Time.now, changefreq: 'weekly'
   # Put links creation logic here.
   #
