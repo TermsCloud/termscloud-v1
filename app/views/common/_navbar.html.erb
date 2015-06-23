@@ -1,7 +1,7 @@
 <header class="header-navbar row">
 <div class="col-xs-6">
   <%= link_to root_path do %>
-    <%= image_tag 'logo.png', class: 'brand-logo', width: 200, height: 75 %>
+    <%= image_tag 'logo.png', class: 'brand-logo', width: 160, height: 60 %>
   <% end %>
 </div>
 <div class="col-xs-6">
@@ -10,6 +10,8 @@
       <% if signed_in?  && current_user.admin %>
         <li><%= link_to 'Admin', admin_root_path %>
       <% end %>
+        <li><%= link_to 'Sign In', '' %>
+        <li><%= link_to 'Blog', '' %>
         <li><%= link_to 'Contact ', contact_path%>
     </ul>
   </nav>

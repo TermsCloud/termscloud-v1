@@ -1,21 +1,23 @@
-<% if @user.errors.any? %>
-  <div class="alert alert-danger" role="alert">
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
 <%= form_for @user, url: homepage_register_user_path do |f| %>
-  <div class="row">
-    <div class="col-sm-6">
-      <%= f.text_field :firstname, class: '', placeholder: 'Firstname' %>
+  <div class="row visible-md visible-lg">
+    <div class="col-sm-6 right-padding">
+      <%= f.text_field :firstname, class: 'half-input first', placeholder: 'Firstname' %>
     </div>
-    <div class="col-sm-6">
-      <%= f.text_field :lastname, class: '', placeholder: 'Lastname' %>
+    <div class="col-sm-6 left-padding">
+      <%= f.text_field :lastname, class: 'half-input', placeholder: 'Lastname' %>
     </div>
   </div>
+  <div class="row visible-sm visible-xs">
+    <div class="col-sm-12">
+      <%= f.text_field :firstname, placeholder: 'Firstname' %>
+    </div>
+  </div>
+  <div class="row visible-sm visible-xs">
+    <div class="col-sm-12">
+      <%= f.text_field :lastname , placeholder: 'Lastname' %>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-sm-12">
       <%= f.email_field :email, placeholder: 'Email' %>
@@ -29,10 +31,19 @@
   <div class="row">
     <div class="col-sm-12">
       <%= f.check_box :terms %>
-      <%= f.label :terms, 'I agree to TermsCloud\'s terms of use' %>
+      <%= f.label :terms, "I agree to TermsCloud\'s #{link_to 'Terms of Use', '' }".html_safe %>
     </div>
   </div>
 
   <%= f.submit 'Get Started' %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 <% end %>
 
