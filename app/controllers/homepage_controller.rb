@@ -36,6 +36,14 @@ class HomepageController < ApplicationController
     render :contact
   end
 
+  def terms
+
+  end
+
+  def privacy
+
+  end
+
   private
 
   def user_params
